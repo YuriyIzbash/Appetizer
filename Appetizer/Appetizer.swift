@@ -18,8 +18,8 @@ struct Appetizer: Decodable, Identifiable {
     let carbs: Int
 }
 
-struct AppetizerResponse {
-    let request: [Appetizer]
+struct AppetizerResponse: Decodable {
+    let appetizers: [Appetizer]
 }
 
 struct MockData {
