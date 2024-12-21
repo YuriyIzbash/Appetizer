@@ -16,8 +16,9 @@ struct AppetizerDetailView: View {
     var body: some View {
         VStack {
             AppetizerRemoteImage( urlString: appetizer.imageURL)
-                .scaledToFit()
-                .frame(width: .infinity, height: 200)
+                .scaledToFill()
+                .frame(width: 320, height: 200)
+                .padding(.bottom)
             
             Text(appetizer.name)
                 .font(.title    )
@@ -25,27 +26,37 @@ struct AppetizerDetailView: View {
                 .padding()
             
             Text(appetizer.description)
-                .font(.title2)
-                .padding()
+                .font(.subheadline)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+                
             
-            HStack(spacing: 30) {
+            HStack {
                 VStack(spacing: 8) {
                     Text("Calories")
                         .font(.title3)
                     Text("\(appetizer.calories)")
                 }
+                .frame(width: 80)
+                
                 VStack(spacing: 8) {
                     Text("Carbs")
                         .font(.title3)
                     Text("\(appetizer.carbs)")
                 }
+                .frame(width: 80)
+                
                 VStack(spacing: 8) {
                     Text("Protein")
                         .font(.title3)
                     Text("\(appetizer.protein)")
                 }
-                .padding()
+                .frame(width: 80)
             }
+            .padding()
+            
+            Spacer()
+            
             Button {
                 
             } label: {
@@ -55,11 +66,11 @@ struct AppetizerDetailView: View {
                     .foregroundColor(.white)
                     .background(Color.brandPrimary)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .padding()
+                    .padding(.bottom)
             }
         }
         
-        .frame(width: 320, height: 525)
+        .frame(width: 320, height: 540)
         .background(Color(.systemBackground))
         .cornerRadius(24)
         .shadow(radius: 40)
