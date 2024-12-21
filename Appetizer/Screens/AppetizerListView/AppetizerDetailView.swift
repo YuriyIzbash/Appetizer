@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct AppetizerDetailsView: View {
+struct AppetizerDetailView: View {
+    
+    @Binding var isShowingDetail: Bool
     
     let appetizer: Appetizer
     
@@ -63,7 +65,7 @@ struct AppetizerDetailsView: View {
         .shadow(radius: 40)
         .overlay(
             Button {
-                print("dismiss")
+                isShowingDetail = false
             } label: {
                 ZStack {
                     Circle()
@@ -82,5 +84,5 @@ struct AppetizerDetailsView: View {
 
 
 #Preview {
-    AppetizerDetailsView(appetizer: MockData.sampleAppetizer)
+    AppetizerDetailView(isShowingDetail: .constant(true), appetizer: MockData.sampleAppetizer)
 }
