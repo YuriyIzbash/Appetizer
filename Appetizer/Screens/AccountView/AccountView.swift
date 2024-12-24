@@ -14,7 +14,6 @@ struct AccountView: View {
     var body: some View {
         NavigationView {
             Form {
-                
                 Section(header: Text("Account")) {
                     TextField("First Name", text: $viewModel.user.firstName)
                     TextField("Last Name", text: $viewModel.user.lastName)
