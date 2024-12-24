@@ -13,16 +13,16 @@
 ## Screenshots 📸
 
 ### Home Screen
-![Home Screen](Screenshots/Home.png)
+<img src="Screenshots/Home.png" alt="Home Screen" width="300"/>
 
 ### Detail Screen
-![Detail Screen](Screenshots/Detail.png)
+<img src="Screenshots/Detail.png" alt="Detail Screen" width="300"/>
 
 ### Account Screen
-![Account Screen](Screenshots/Account.png)
+<img src="Screenshots/Account.png" alt="Account Screen" width="300"/>
 
 ### Order Screen
-![Order Screen](Screenshots/Order.png)
+<img src="Screenshots/Order.png" alt="Order Screen" width="300"/>
 
 ---
 
