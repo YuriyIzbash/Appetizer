@@ -28,6 +28,7 @@ struct EmptyState: View {
                     .multilineTextAlignment(.center)
                     .padding()
             }
+            .offset(y: -50)
         }
     }
 }
