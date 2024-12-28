@@ -19,7 +19,7 @@ final class AccountViewModel: ObservableObject {
         do {
             let data = try JSONEncoder().encode(user)
             userData = data
-            alertItem = AlertContext.usesrSaveSuccess
+            alertItem = AlertContext.userSaveSuccess
         } catch {
             alertItem = AlertContext.invalidUserData
         }
